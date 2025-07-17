@@ -8,7 +8,7 @@ def plot_top_rated_movies(df, n=5):
     plt.barh(top_movies["Title"], top_movies["Rating"], color="skyblue")
     plt.xlabel("IMDb Rating")
     plt.title(f"Top {n} Rated Movies")
-    plt.gca().invert_yaxis()  # highest rating at top
+    plt.gca().invert_yaxis()
     plt.tight_layout()
     plt.show()
 
@@ -42,14 +42,14 @@ def plot_genre_distribution(df):
             all_genres.append(g.strip())
 
     genre_counts = Counter(all_genres)
-    top_genres = dict(genre_counts.most_common(6))  # Top 6 genres
+    top_genres = dict(genre_counts.most_common(6))
 
     plt.figure(figsize=(8, 8))
     plt.pie(list(top_genres.values()), labels=list(top_genres.keys()), autopct='%1.1f%%', startangle=140)
 
     plt.title("Top Movie Genres")
     plt.tight_layout()
-    plt.savefig("assets/genres_pie.png")  # Save chart to assets folder
+    plt.savefig("assets/genres_pie.png")
 
     plt.show()
 
@@ -63,5 +63,5 @@ def plot_rating_trend(df):
     plt.ylabel("Average Rating")
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig("assets/top5_ratings.png")  # Save chart to assets folder
+    plt.savefig("assets/top5_ratings.png")
     plt.show()

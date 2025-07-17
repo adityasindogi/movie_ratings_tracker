@@ -10,13 +10,11 @@ def main():
 
     print(df.to_string(index=False))
 
-    # Basic analysis
     show_top_movies(df)
     show_average_rating(df)
     show_movies_by_year(df)
     show_director_counts(df)
 
-    # Visualizations
     plot_top_rated_movies(df, n=5)
     plot_movies_per_year(df)
     plot_director_counts(df, n=5)

@@ -1,10 +1,9 @@
 import requests
 import pandas as pd
 
-API_KEY = "7bca4432"  # Replace this with your real key
+API_KEY = "7bca4432"
 BASE_URL = "http://www.omdbapi.com/"
 
-# Sample list of popular movie titles to fetch from OMDb
 MOVIES = [
     "The Shawshank Redemption",
     "The Godfather",
