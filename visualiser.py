@@ -36,7 +36,6 @@ def plot_director_counts(df, n=5):
 
 def plot_genre_distribution(df):
     from collections import Counter
-
     all_genres = []
     for genres in df["Genre"].dropna():
         for g in genres.split(","):
@@ -50,6 +49,8 @@ def plot_genre_distribution(df):
 
     plt.title("Top Movie Genres")
     plt.tight_layout()
+    plt.savefig("assets/genres_pie.png")  # Save chart to assets folder
+
     plt.show()
 
 def plot_rating_trend(df):
@@ -62,4 +63,5 @@ def plot_rating_trend(df):
     plt.ylabel("Average Rating")
     plt.grid(True)
     plt.tight_layout()
+    plt.savefig("assets/top5_ratings.png")  # Save chart to assets folder
     plt.show()
