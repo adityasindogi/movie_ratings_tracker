@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-API_KEY = "7bca4432"
+API_KEY = ""
 BASE_URL = "http://www.omdbapi.com/"
 
 MOVIES = [
